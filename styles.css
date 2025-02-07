@@ -1,0 +1,74 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+    width: 350px;
+    height: 250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Image styling */
+  img {
+    height: 60px;
+  }
+  
+  /* Main container styling */
+  #container {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Button styling */
+  button {
+    margin: 10px;
+    padding: 12px 20px; /* Increase button size */
+    border: none;
+    border-radius: 8px; /* Rounded corners for buttons */
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Light theme */
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+  
+    button {
+      background-color: #007bff;
+      color: white;
+    }
+  
+    button:hover {
+      background-color: #0056b3;
+    }
+  }
+  
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #1f1f1f;
+      color: #f1f1f1;
+    }
+  
+    button {
+      background-color: #4caf50;
+      color: white;
+    }
+  
+    button:hover {
+      background-color: #388e3c;
+    }
+  }
+  
+  /* Status text styling */
+  #status {
+    margin: 20px 0;
+    font-size: 20px; /* Increase font size */
+    font-weight: 600;
+  }
