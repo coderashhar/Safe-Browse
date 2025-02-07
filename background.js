@@ -19,7 +19,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       },
       body: JSON.stringify({ url }),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
       .then((data) => {
         sendResponse({ isPhishing: data.isPhishing });
       })
@@ -42,6 +47,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
       });
     });
   } else if (message.action === "viewLogs") {
-    chrome.tabs.create({ url: "logs.html" }); // Redirect to a logs page
+    // Open logs page from the logs folder
+    chrome.tabs.create({ url: chrome.runtime.getURL("logs/logs.html") });
   }
 });

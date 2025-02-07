@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 10px 80px 0 80px;
+  }
+  h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  @media (prefers-color-scheme: light) {
+    th, td {
+      border: 1px solid #ddd;
+    }
+  
+    th {
+      background-color: #fff;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    body{
+      background-color: #1f1f1f;
+    }
+    th, td {
+      border: 1px solid #3f3f3f;
+    }
+  
+    th {
+      color:#ddd;
+    }
+  }
