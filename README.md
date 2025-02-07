@@ -30,6 +30,9 @@ SafeBrowse is a Chrome extension designed to protect users from phishing website
 
 ### Backend Setup
 
+0. **Pickle file:**
+    Generate a model.pkl file and paste it in the folder
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/coderashhar/Safe-Browse.git
